@@ -24,7 +24,11 @@ class LROutputAPI {
 		
 		$full_stars = floor($data->average);
 		$empty_stars = 5 - ceil($data->average);
-		$stroked = ($user_rating->rating - $full_stars);
+		
+		if($user_rating != null)
+			$stroked = ($user_rating->rating - $full_stars);
+		else
+			$stroked = 0;
 		
 		for($i = 0; $i < $full_stars; $i++)
 			echo "<div class='lr-sprite lr-star lr-star-" . $size . "'></div>";
