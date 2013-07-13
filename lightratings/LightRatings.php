@@ -32,6 +32,7 @@ class LightRatings {
 		add_action('wp_enqueue_scripts', array(&$this, 'enqueue'));
 		
 		new LROutputAPI();
+		new LRAjaxAPI();
 	}
 	
 	public function enqueue(){
@@ -46,7 +47,7 @@ class LightRatings {
 		
 		$sql = array();
 		
-		$sql[] = "CREATE TABLE " . $wpdb->ls_log . " (
+		$sql[] = "CREATE TABLE " . $wpdb->lr_log . " (
 					id INT(11) AUTO_INCREMENT NOT NULL,
 					event VARCHAR(100) NOT NULL,
 					level VARCHAR(100) NOT NULL DEFAULT 'notice',
@@ -56,7 +57,7 @@ class LightRatings {
 					PRIMARY KEY  (id)
 				);";
 		
-		$sql[] = "CREATE TABLE " . $wpdb->ls_ratings . " (
+		$sql[] = "CREATE TABLE " . $wpdb->lr_ratings . " (
 					id INT(11) AUTO_INCREMENT NOT NULL,
 					rating INT(11) NOT NULL,
 					post_id INT(11) NOT NULL,
@@ -75,8 +76,8 @@ class LightRatings {
 	public function initialize_wpdb_tables(){
 		global $wpdb;
 		
-		$wpdb->ls_log = $wpdb->prefix."lightratings_log";
-		$wpdb->ls_ratings = $wpdb->prefix."lightratings";
+		$wpdb->lr_log = $wpdb->prefix."lightratings_log";
+		$wpdb->lr_ratings = $wpdb->prefix."lightratings";
 	}
 	
 	private function autoloader($class){

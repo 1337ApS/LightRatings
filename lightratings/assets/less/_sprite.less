@@ -1,3 +1,9 @@
+.lr-can-rate{
+	.lr-star{
+		cursor: pointer;
+	}
+}
+
 .lr-sprite{
 	display: inline-block;
 	background: url('../img/sprite.png');
@@ -5,80 +11,128 @@
 	&.lr-star{
 		background-position: 0px 0px;
 
+		/*&.lr-star-stroke{
+			background-position: 0px -210px;
+		}*/
+
+		&.lr-star-shaded{
+			background-position: 0px -150px;
+		}
+
 		&.lr-star-large{
 			background-position: 0px 0px;
+			
+			&.lr-star-shaded{
+				background-position: 0px -150px;
+			}
+
+			/*&.lr-star-stroke{
+				background-position: 0px -210px;
+			}*/
 		}
 
 		&.lr-star-medium{
 			background-position: -32px 0px;
+
+			&.lr-star-shaded{
+				background-position: -32px -150px;
+			}
+
+			/*&.lr-star-stroke{
+				background-position: -32px -210px;
+			}*/
 		}
 
 		&.lr-star-small{
 			background-position: -56px 0px;
-		}
-	}
 
-	&.lr-star-half-stroke{
-		background-position: 0px -30px;
+			&.lr-star-shaded{
+				background-position: -56px -150px;
+			}
 
-		&.lr-star-large{
-			background-position: 0px -30px;
-		}
-
-		&.lr-star-medium{
-			background-position: -32px -30px;
-		}
-
-		&.lr-star-small{
-			background-position: -56px -30px;
+			/*&.lr-star-stroke{
+				background-position: -56px -210px;
+			}*/
 		}
 	}
 
 	&.lr-star-half{
 		background-position: 0px -60px;
 
+		&.lr-star-stroke{
+			background-position: 0px -30px;
+		}
+
+		&.lr-star-shaded{
+			background-position: 0px -180px;
+		}
+
 		&.lr-star-large{
 			background-position: 0px -60px;
+
+			&.lr-star-shaded{
+				background-position: 0px -180px;
+			}
+
+			&.lr-star-stroke{
+				background-position: 0px -30px;
+			}
 		}
 
 		&.lr-star-medium{
 			background-position: -32px -60px;
+
+			&.lr-star-shaded{
+				background-position: -32px -180px;
+			}
+
+			&.lr-star-stroke{
+				background-position: -32px -30px;
+			}
 		}
 
 		&.lr-star-small{
 			background-position: -56px -60px;
-		}
-	}
 
-	&.lr-star-empty-stroke{
-		background-position: 0px -90px;
+			&.lr-star-stroke{
+				background-position: -56px -30px;
+			}
 
-		&.lr-star-large{
-			background-position: 0px -90px;
-		}
-
-		&.lr-star-medium{
-			background-position: -32px -90px;
-		}
-
-		&.lr-star-small{
-			background-position: -56px -90px;
+			&.lr-star-shaded{
+				background-position: -56px -180px;
+			}
 		}
 	}
 
 	&.lr-star-empty{
 		background-position: 0px -120px;
 
+		&.lr-star-stroke{
+			background-position: 0px -90px;
+		}
+
 		&.lr-star-large{
 			background-position: 0px -120px;
+
+			&.lr-star-stroke{
+				background-position: 0px -90px;
+			}
 		}
 
 		&.lr-star-medium{
 			background-position: -32px -120px;
+
+			&.lr-star-stroke{
+				background-position: -32px -90px;
+			}
 		}
 
 		&.lr-star-small{
 			background-position: -56px -120px;
+
+			&.lr-star-stroke{
+				background-position: -56px -90px;
+			}
 		}
 	}
 
