@@ -14,6 +14,11 @@ class LROutputAPI {
 			$size = 'large';
 		
 		$data = LRUtils::get_aggregated_rating($post_id);
+		if($data == null){
+			$data = new stdClass();
+			$data->average = 0;
+			$data->count = 0;
+		}
 		
 		$user_id = get_current_user_id();
 		$user_rating = LRUtils::get_rating($post_id, $user_id);
